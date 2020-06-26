@@ -1,0 +1,23 @@
+.windowMessage {
+  margin: 10px 0;
+}
+
+.inputMessage {
+  max-width: 400px;
+  min-height: 20px;
+  max-height: 100px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 6px;
+  border: solid 1px #d3d9de;
+  overflow: hidden;
+  overflow-y: hidden;
+  outline: none;
+  overflow-y: auto;
+}
+
+.inputArea {
+  padding: 10px 20px 10px 10px;
+  outline: none;
+  border-radius: 6px;
+}
