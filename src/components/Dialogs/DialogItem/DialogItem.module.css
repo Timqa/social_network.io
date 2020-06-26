@@ -1,0 +1,14 @@
+.dialog {
+  padding: 5px 0;
+}
+
+.dialog a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ava {
+  width: 20px;
+  margin-right: 5px;
+}

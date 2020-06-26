@@ -1,0 +1,48 @@
+.profileInfo {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+.fon {
+  width: 150px;
+  max-width: 100%;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.avatarka {
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #E3E4E8;
+  height: 145px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.descriptionInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerInfo {
+  font-style: oblique;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #E3E4E8;
+  padding: 10px;
+  margin: 0 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.name {
+  font-weight: 500;
+}
+
+.status {
+  text-align: right;
+}
