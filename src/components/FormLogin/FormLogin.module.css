@@ -1,0 +1,10 @@
+.inp {
+  border: 1px solid #777674;
+  border-radius: 3px;
+  padding: 2px 4px;
+  box-sizing: border-box;
+}
+
+.inp:focus {
+  outline: 1px solid #777674;
+}

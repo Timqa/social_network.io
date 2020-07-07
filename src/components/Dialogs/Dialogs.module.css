@@ -52,39 +52,6 @@
   border-left: 8px solid rgba(143, 188, 143, 0.42);
 }
 
-.dialogArea {
-  display: block;
-  margin: 20px 0 10px 0;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid lightblue;
-  box-shadow: 0 0 8px black;
-  resize: none;
-}
-
-.btnDialogSend {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  padding: .2em 1em;
-  margin-bottom: 5px;
-  outline: none;
-  border-width: 2px 0;
-  border-style: solid none;
-  border-color: #FDBE33 #000 #D77206;
-  border-radius: 6px;
-  background: linear-gradient(#F3AE0F, #E38916) #E38916;
-  transition: 0.2s;
-}
-
-.btnDialogSend:hover {
-  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
-}
-
-.btnDialogSend:active {
-  background: linear-gradient(#f59500, #f5ae00) #f59500;
-}
-
 .windowMessage {
   margin: 10px 0;
 }

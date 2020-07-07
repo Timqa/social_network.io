@@ -10,7 +10,7 @@ import ProfileContainer from "./components/Profile/ProfileContainer";
 import {DialogsContainer} from "./components/Dialogs/DialogsContainer";
 import {UsersContainer} from './components/Users/UsersContainer';
 import HeaderContainer from "./components/Header/HeaderContainer";
-import {Login} from "./components/Login/Login";
+import {FormLogin} from "./components/FormLogin/FormLogin";
 
 const App = () => {
   return (
@@ -27,7 +27,7 @@ const App = () => {
             <Route path='/music' component={Music}/>
             <Route path='/news' component={News}/>
             <Route path='/settings' component={Settings}/>
-            <Route path='/login' component={Login}/>
+            <Route path='/login' component={FormLogin}/>
           </Switch>
         </div>
       </div>

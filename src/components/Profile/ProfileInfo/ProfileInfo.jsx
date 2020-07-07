@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './ProfileInfo.module.css';
-import {Loader} from "../../Loader/Loader";
+import {Loader} from "../../common/Loader/Loader";
 import avatar from './../../../assets/img/avatar-user.svg'
 import {ProfileStatus} from "./ProfileStatus";
 

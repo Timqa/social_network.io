@@ -5,7 +5,7 @@ import {
   setCurrentPageAC, unFollowThunkCreator
 } from "../../redux/reducers/users-reducer";
 import {Users} from "./Users";
-import {Loader} from "../Loader/Loader";
+import {Loader} from "../common/Loader/Loader";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
 

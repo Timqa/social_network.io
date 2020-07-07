@@ -1,0 +1,33 @@
+.dialogArea {
+  display: block;
+  margin: 20px 0 10px 0;
+  width: 50%;
+  height: 60px;
+  border-radius: 4px;
+  border: 1px solid lightblue;
+  box-shadow: 0 0 8px black;
+  resize: none;
+}
+
+.btnDialogSend {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0.2em 1em;
+  margin-bottom: 5px;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #fdbe33 #000 #d77206;
+  border-radius: 6px;
+  background: linear-gradient(#f3ae0f, #e38916) #e38916;
+  transition: 0.2s;
+}
+
+.btnDialogSend:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+
+.btnDialogSend:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}

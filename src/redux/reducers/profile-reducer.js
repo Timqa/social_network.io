@@ -1,4 +1,4 @@
-import {ADD_POST, SET_STATUS, SET_USER_PROFILE, UPDATE_NEW_POST_TEXT} from "./types";
+import {ADD_POST, SET_STATUS, SET_USER_PROFILE} from "./types";
 import {profileAPI} from "../../api/api";
 
 const initialState = {
@@ -16,7 +16,6 @@ const initialState = {
       img: "https://www.svgrepo.com/show/7025/user.svg"
     }
   ],
-  newPostText: 'it-kamasutraaaaa!',
   profile: null,
   status: ''
 };
@@ -24,22 +23,15 @@ const initialState = {
 export const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_POST:
-      if (state.newPostText) {
-        return {
-          ...state,
-          posts: [...state.posts, {
-            id: 5,
-            message: state.newPostText,
-            likesCount: 0,
-            img: "https://www.svgrepo.com/show/7025/user.svg"
-          }],
-          newPostText: ''
-        };
-      } else {
-        return state
-      }
-    case UPDATE_NEW_POST_TEXT:
-      return {...state, newPostText: action.textPost}
+      return {
+        ...state,
+        posts: [...state.posts, {
+          id: 5,
+          message: action.newMessageBody,
+          likesCount: 0,
+          img: "https://www.svgrepo.com/show/7025/user.svg"
+        }]
+      };
     case SET_USER_PROFILE:
       return {...state, profile: action.profile}
     case  SET_STATUS:
@@ -49,8 +41,7 @@ export const profileReducer = (state = initialState, action) => {
   }
 }
 
-export const addPostAC = () => ({type: ADD_POST})
-export const updateNewPostTextAC = (textPost) => ({type: UPDATE_NEW_POST_TEXT, textPost})
+export const addPostAC = (newMessageBody) => ({type: ADD_POST, newMessageBody})
 export const setProfileAC = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatusAC = (status) => ({type: SET_STATUS, status})
 
@@ -73,7 +64,7 @@ export const getUserStatusThunkCreator = (userId) => {
 export const updateUserStatusThunkCreator = (status) => {
   return (dispatch) => {
     profileAPI.updateStatus(status).then(data => {
-      if (data.resultCode === 0){
+      if (data.resultCode === 0) {
         dispatch(setStatusAC(status));
       }
     })
