@@ -3,14 +3,14 @@ import React from 'react';
 import style from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Messages from './Messages/Messages';
-import { Redirect } from 'react-router-dom';
-import { DialogsMessageFormRedux } from '../FormMessages/FormMessages';
+import {Redirect} from 'react-router-dom';
+import {DialogsMessageFormRedux} from '../FormMessages/FormMessages';
 
 const Dialogs = (props) => {
   const state = props.dialogsPage;
 
   const dialogsElements = state.dialogs.map((dialog) => (
-    <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} img={dialog.img} />
+    <DialogItem key={dialog.id} name={dialog.name} id={dialog.id} img={dialog.img}/>
   ));
   const messagesElements = state.messages.map((message) => (
     <Messages
@@ -23,10 +23,11 @@ const Dialogs = (props) => {
 
   const addNewMessage = (values) => {
     props.onSendMessage(values.newMessageBody);
-  };
+    const newMessageBody = state.newMessageBody;
+  }
 
   if (!props.isAuth) {
-    return <Redirect to={'/login'} />;
+    return <Redirect to={'/login'}/>;
   }
 
   return (
@@ -41,5 +42,6 @@ const Dialogs = (props) => {
     </div>
   );
 };
+
 
 export default Dialogs;
